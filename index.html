@@ -3,12 +3,194 @@
 
 <head>
     <meta charset = "UTF-8">
-    <title> Document </title>
-    <link rel = "stylesheet" href= "" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ALEXIA TEK </title>
+    <link rel = "stylesheet" href= "style.css" >
+    <script src="https://kit.fontawesome.com/aa4b6b6942.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <!--------HOME-------->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/Your paragraph text.png" class="logo" alt="Alexia logo"> 
+                <ul id="sidemenu">
+                    <li><a href="#header"> Home</a></li>
+                    <li><a href="#about"> About</a></li>
+                    <li><a href="#Services"> Services</a></li>
+                    <li><a href="#portfolio"> Portfolio</a></li>
+                    <li><a href="#contact"> Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="clossmenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Developer</p>
+                <h1>Hi, I'm <span>Alexia Tek</span>.</h1>
+            </div>
+        </div>
 
+    </div>
+
+       <!------ABOUT------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="column-1">
+                    <img src="images/aiony-haust-3TLl_97HNJo-unsplash.jpg" alt="" class="me">
+                </div>
+                <div class="column-2">
+                    <h1 class = "sub-title">About Me.</h1>
+                    <p>I'm a Telecommunications and Information Engineering student with a strong passion for technology, innovation, and design. My interests span cybersecurity, frontend development, IoT systems, and smart automation. I enjoy creating practical, user-focused solutions through both hardware and software. I'm currently building skills in blockchain, Flutter, and real-world tech projects that drive meaningful impact. I'm driven, detail-oriented, and constantly seeking growth through learning and collaboration.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills.</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience.</p>
+                        <p class="tab-links" onclick="opentab('education')">Education.</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills" >
+                        <ul>
+                            <li><span>Embedded Systems Development</span><br>Designing and programming smart devices.</li>
+                            <li><span>Web Development</span><br>Building websites</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024</span><br>Developed and maintained PLC systems for industrial automation at KPC</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-Current</span><br>BSc. Telecommunication Engineering at JKUAT</li>
+                            <li><span>2025</span><br>Software Development at The Cube</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------SERVICES------>
+    <div id="Services">
+        <div class="container">
+            <h1 class = "sub-title">My Services</h1> 
+            <div class="Services-List">
+                <div>
+                    <i class="fa-solid fa-microchip"></i>
+                    <h2>Embeded Systems</h2>
+                    <p>Building microcontroller-based systems that bring hardware to life.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>I design and build responsive, user-friendly websites tailored to your brand and business goals.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-hive"></i>
+                    <h2>Smart Contract</h2>
+                    <p>Developing Web3 smartcontrats in Blockchain using Solidity.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------PORTFOLIO--------->
+    
+    <div id="portfolio">
+        <div class="container">
+            <h1 class = "sub-title">My Work</h1> 
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/fahim-muntashir-M02I8Ab_TT4-unsplash.jpg" alt="">
+                    <div class="layer">
+                        <h3>Smart Irrigation System</h3>
+                        <p> Uses sensors and automated controls to water crops or gardens efficiently, based on real-time data like soil moisture, weather, and temperature.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/team-nocoloco-w9jKH8ZnF7A-unsplash.jpg" alt="">
+                    <div class="layer">
+                        <h3>E-Commerce Website</h3>
+                        <p>Designed for buying and selling products or services online. It includes features like product listings, shopping carts, payment gateways, and user accounts—everything needed to run an online store.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/shubham-dhage-T9rKvI3N0NM-unsplash.jpg" alt="">
+                    <div class="layer">
+                        <h3>SolarTek</h3>
+                        <p>A digital currency that rewards solar energy producers for generating clean electricity and allows them to sell surplus energy.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!----------CONTACT-------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i></i>alexiatek04@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>254794189135</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="" class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn3">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
+<script>
+
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function clossmenu(){
+        sidemenu.style.right ="-200px";
+    }
+</script>
 </html>
+

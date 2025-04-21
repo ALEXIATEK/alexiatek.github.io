@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif ;
+    box-sizing: border-box;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #080808;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/bulbul-ahmed-cIEb4UJ4ruk-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: auto 90% ;
+    background-position: right center;
+}
+
+.logo {
+    width:130px;   
+    background-position: left; 
+  }
+
+.container{
+     padding:10px 10% ;
+}
+
+nav {
+    display: flex; /*arrange items in rows or columns (horizontally or vertically)*/
+    align-items: 20px right; /*vertically*/
+    justify-content: space-between; /*horizontal*/
+    flex-wrap: wrap;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: ' ';
+    width: 0;
+    height: 3px;
+    background-color: #ae5471;
+    position: absolute;
+    left:0;
+    bottom: -6px;
+    transition: 0.3s;
+    box-shadow: 0 0 8px #ae5471, 0 0 15px #ae5471; /* glow effect */
+    border-radius: 2px;
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* grows when touched(underline)*/
+}
+
+.header-text{
+   margin-top: 10%;
+   font-size: 30px;
+}
+
+.header-text h1{
+    margin-top: 10px;
+    font-size: 50px;
+ }
+
+ .header-text h1 span{
+    color: #ae5471;
+ }
+
+   /*------ABOUT-------*/
+#about{
+  padding: 100px 0;
+  color: #ababab;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.column-1 {
+    flex-basis: 33%;
+}
+
+/* second image adjustments*/
+.column-1 img { 
+    width:130%;   
+    height: 89%; /* Keeps the image proportion */
+    margin-left:0;
+  }
+
+  .column-2{
+    flex-basis: 40%;
+    margin-top: 0 ;
+  }
+
+  .column-2 h1{
+    font-size: 40px;
+    font-weight: 600;
+    color: #ae5471;
+    margin-bottom: 10px;
+}
+
+  .column-2 p{
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+.tab-titles{
+    display: flex;
+    margin: 40px 0 40px;
+}
+
+.tab-titles p{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ae5471;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.8s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+   list-style: none;
+   margin: 10px 0;
+   font-size:17px
+}
+
+.tab-contents ul li span{
+    color:#ae5471;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display :block;
+}
+
+/*-------------SERVICES---------*/
+#Services{
+    padding: 30px 0;
+}
+
+.Services-List{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 40px;
+}
+
+.Services-List div{
+    background: #454444;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px; 
+    transition: background 0.5s, transform 0.5s;
+}
+
+.Services-List div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.Services-List div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.Services-List div a{
+    color: #f9f9f9;
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.Services-List div:hover{
+    background: #ad637b;
+    transform: translateY(-10px);
+}
+
+.Services-List div a:hover{
+    color: purple;
+}
+
+/*------PORTFOLIO-----------*/
+
+#portfolio{
+    padding: 50px 0;
+}
+
+.work img{
+    width:110%;   
+    height: auto; /* Keeps the image proportion */
+    margin-left:0%; 
+    margin-top: 5%;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px; 
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.layer h3{
+    margin-bottom: 10px;
+}
+
+.layer a{
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 40px;
+    line-height: 40px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* to make it a circle */
+    text-align: center;
+     
+}
+
+/* part that comes on top of the work images when you hover on the images */
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6), #ae5471);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex; /* allow elements to be arranged in row or column */
+    align-items: center; /*aligns items vertically*/
+    justify-content: center;/* aligns items horizontally */
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+/* when hover on work, the image zooms*/
+.work:hover img{
+    transform: scale(1.1); /* zoom image */
+}
+
+/* when moving cursor(hover) on work i.e image, layer(pink overshadow) pops */
+.work:hover .layer{
+    height: 100%;
+}
+
+.btn{
+    padding: 10px; /* space inside button */
+    margin: 50px auto;
+    display: block;
+    width: fit-content;
+    border: 1px solid #ae5471;
+    border-radius: 6px;
+    color: #ffffff;
+    text-decoration: none;
+    border-width: 3px;
+}
+
+.btn:hover {
+    background: #ae5471;
+}
+
+/*--------CONTACT ME-----------*/
+
+.contact-left{
+    flex-basis: 50%; /* percentage width to cover the page*/
+}
+
+.contact-right{
+    flex-basis: 50%;
+} 
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color: #ae5471;
+    margin-right:10px;
+    font-size: 15px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    color: #a1a1a1;
+    margin-right: 8px;
+    font-size: 20px;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover{
+    transform: translateY(-5px);
+    color: #ae5471;
+}
+
+.btn.btn2{
+   display: inline-block;
+   background-color: #ae5471;
+}
+
+.btn.btn2:active{
+    transform: translateY(3px);
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.btn.btn3{
+    background-color: #ae5471;
+    margin-top: 10px;
+}
+
+.btn.btn3:active{
+    transform: translateY(3px);
+}
+
+nav .fa-solid{
+    display: none;
+}
+
+/*-------CSS for small screen--------*/
+
+@media only screen and (max-width: 600px) {
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .header-text h1{
+        font-size: 30px;
+    }
+
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul{
+        background: #ae5471 ;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top:50px ;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .column-1, .column-2 {
+        flex-basis: 100%;
+    }
+    .column-1{
+        margin-bottom: 30px ;
+        flex-basis: 70%;
+    }
+
+    .column-2 p{
+        font-size: 15px;
+    }
+
+    .tab-links{
+        font-size: 16px;
+       
+    }
+
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+        
+    }
+}
+
+
+
+
+
+  
